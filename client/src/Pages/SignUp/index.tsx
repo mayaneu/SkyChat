@@ -6,7 +6,7 @@ import ColumnContainer from '../../Layout/ColumnContainer';
 import { useWs } from '../Home/Providers/wsProvider';
 import Button from '../../Components/Button';
 
-const SignInPage = () => {
+const SignupPage = () => {
     const [username, setUsername] = useState('');
     const [fullname, setfullname] = useState('');
     const [password, setPassword] = useState('');
@@ -33,7 +33,7 @@ const SignInPage = () => {
                 }}
             >
                 <Typography sx={{ color: 'text.primary', fontWeight: 'bold' }} component="h1" variant="h5">
-                    SignIn
+                    Signup
                 </Typography>
                 <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
                     <TextField
@@ -79,4 +79,4 @@ const SignInPage = () => {
     );
 };
 
-export default SignInPage;
+export default SignupPage;

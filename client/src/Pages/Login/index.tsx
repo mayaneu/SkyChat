@@ -60,9 +60,9 @@ const LoginPage = () => {
                 <Button onClick={handleSubmit}>
                     login
                 </Button>
-                <Link to='/signin'>
+                <Link to='/signup'>
                     <Button>
-                        signUp
+                        signup
                     </Button>
                 </Link>
             </Box>

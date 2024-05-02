@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RequireAuth from "./RequireAuth";
 import Home from "../Pages/Home";
 import Login from "../Pages/Login";
-import SignInPage from "../Pages/SignIn";
+import SignUpPage from "../Pages/SignUp";
 import DroneDashboard from "../Pages/DroneControl";
 
 const routes = [
@@ -18,8 +18,8 @@ const routes = [
         element: <Login />
     },
     {
-        path: '/signin',
-        element: <SignInPage />
+        path: '/signup',
+        element: <SignUpPage />
     },
     {
         path: '/droneControl',

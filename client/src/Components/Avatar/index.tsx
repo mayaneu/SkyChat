@@ -20,11 +20,11 @@ const Avatar: FC<AvatarProps> = forwardRef<HTMLDivElement, AvatarProps>(({ name,
         {...props}
         sx={{
             '& .MuiBadge-dot': {
-                width: '15px', // Make the dot larger
-                height: '15px', // Make the dot larger
-                borderRadius: '50%', // Ensure it stays circular
-                border: '2px solid white', // Optional: add a white border to make it stand out against the avatar
-                backgroundColor: '#44b700', // Optional: a specific green color
+                width: '15px', 
+                height: '15px',
+                borderRadius: '50%', 
+                border: '2px solid white',
+                backgroundColor: '#44b700',
             }
         }}
     >
