@@ -45,8 +45,42 @@ Given more development time, several features and improvements are planned:
 
 ### Prerequisites
 - Python installed on your machine.
-- MongoDB with replicaset configured.
 - `.env` file set up (refer to `example.env` for setup).
+
+### mongodb setup
+1. Download MongoDB from [MongoDB Community Download](https://www.mongodb.com/try/download/community).
+2. Install MongoDB using the wizard.
+3. Download and extract the MongoDB Shell from [MongoDB Shell Download](https://www.mongodb.com/try/download/shell).
+4. Add the MongoDB Shell bin directory to your environment's PATH.
+5. Edit the MongoDB config file to add a replica set:
+```bash
+replication:
+  replSetName: "my-rs"
+```
+6. Restart the MongoDB service.
+7. Initialize the replica set:
+```bash
+mongosh
+rs.initiate()
+```
+8. add to the connection string the name you gave to your replicaset
+
+### Simulator setup
+- If using Windows, download WSL.
+- Open Ubuntu terminal and set up the ArduPilot simulator
+
+```bash
+git clone https://github.com/ArduPilot/ardupilot.git
+cd ardupilot/
+git fetch --tags
+git checkout tags/Copter-4.4.4
+git submodule update --init --recursive
+Tools/environment_install/install-prereqs-ubuntu.sh -y
+. ~/.profile
+cd ArduCopter
+sim_vehicle.py -w
+sim_vehicle.py --console --map
+```
 
 ### Setup
 ```bash
